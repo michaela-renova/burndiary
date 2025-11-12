@@ -1,5 +1,5 @@
 <x-layouts.app>
- @vite('resources/js/fire.js')
+
 <div>
 <h1 class="font-bold text-orange-900 text-3xl">Vytvoř nový příspěvek</h1><br>
 

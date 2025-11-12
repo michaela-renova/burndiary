@@ -10,7 +10,7 @@ method="POST">
 
 
     @csrf
-    <x-input type="text" name="title" placeholder="Sem napiš svůj nadpis (nepovinné)"  class="my-4 shadow border !border-[#C89D7C] focus:outline-none text-left text-xl text-orange-900 placeholder-[#C89D7C] placeholder:text-lg placeholder:italic"/>
+    <x-input type="text" name="title" placeholder="Sem napiš svůj nadpis (nepovinné)"  class="my-4 shadow border !border-gray-300  focus:outline-none text-left text-xl text-orange-900 placeholder-[#C89D7C] placeholder:text-lg placeholder:italic"/>
 
     <x-textarea gif-id="fire-gif"></x-textarea>
 
@@ -24,13 +24,13 @@ method="POST">
 
     @else
     <form>
-    <x-input type="text" name="title" placeholder="Sem napiš svůj nadpis (nepovinné)"  class="my-4 shadow border !border-[#C89D7C] focus:outline-none text-left text-xl text-orange-900 placeholder-[#C89D7C] placeholder:text-lg placeholder:italic"/>
+    <x-input type="text" name="title" placeholder="Sem napiš svůj nadpis (nepovinné)"  class="my-4 shadow border !border-gray-300 focus:outline-none text-left text-xl text-orange-900 placeholder-[#C89D7C] placeholder:text-lg placeholder:italic"/>
     <x-textarea gif-id="fire-gif-guest"></x-textarea>
 
     <div x-data="{ modalOpen: false }"
     @keydown.escape.window="modalOpen = false"
     class="relative z-50 w-auto h-auto">
-    <x-button type="button" @click="modalOpen=true" class="inline-flex justify-center items-center">
+    <x-button type="button" @click="modalOpen=true" class="inline-flex justify-center items-center !bg-gray-500 hover:!bg-gray-600">
         Uložit</x-button>
     <template x-teleport="body">
         <div x-show="modalOpen" class="fixed top-0 left-0 z-[99] flex items-center justify-center w-screen h-screen" x-cloak>

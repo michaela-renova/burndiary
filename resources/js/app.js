@@ -1,6 +1,5 @@
 import './bootstrap';
 
-<<<<<<< HEAD
 import Alpine from 'alpinejs'
 window.Alpine = Alpine
 Alpine.start()
@@ -46,6 +45,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 ;
-=======
->>>>>>> parent of 8249026 (edits)
 

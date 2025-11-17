@@ -3,7 +3,7 @@
 
 <h1 class="text-2xl font-bold mb-6">Registrace</h1>
 
-<form action="/register" method="POST">
+<form action="/register" method="POST" id="register-form">
     @csrf
     <label for="name" class="font-bold">Jméno</label>
 

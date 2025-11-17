@@ -46,3 +46,9 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 ;
 
+
+import { createIcons, icons } from 'lucide';
+
+document.addEventListener("DOMContentLoaded", () => {
+    createIcons({ icons });
+});

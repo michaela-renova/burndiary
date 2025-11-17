@@ -1,7 +1,7 @@
 <x-layouts.app>
 
 <div>
-<h1 class="font-bold text-orange-500 text-3xl">Vytvoř nový příspěvek</h1><br>
+<h1 class="font-bold text-orange-500 text-3xl mb-6">Vytvoř nový příspěvek</h1>
 
 @auth  
 <form action="/create-post"
@@ -10,7 +10,7 @@ method="POST">
 
 
     @csrf
-    <x-input type="text" name="title" placeholder="Sem napiš svůj nadpis (nepovinné)"  class="my-4 shadow border focus:outline-none text-left text-xl text-orange-900  placeholder:text-gray-300 placeholder:text-lg placeholder:italic"/>
+    <x-title />
 
     <x-textarea gif-id="fire-gif"></x-textarea>
 
@@ -24,7 +24,7 @@ method="POST">
 
     @else
     <form>
-    <x-input type="text" name="title" placeholder="Sem napiš svůj nadpis (nepovinné)"  class="my-4 shadow border focus:outline-none text-left text-xl text-orange-900 placeholder:text-gray-300 placeholder:text-lg placeholder:italic"/>
+    <x-title />
     <x-textarea gif-id="fire-gif-guest"></x-textarea>
 
     <div x-data="{ modalOpen: false }"
@@ -52,7 +52,7 @@ method="POST">
                 x-transition:leave-end="opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95"
                 class="relative px-7 py-6 w-full bg-white sm:max-w-lg sm:rounded-lg">
                 <div class="flex justify-between items-center pb-2">
-                    <h3 class="text-lg font-semibold">Pro uložení příspěvku je nutné se <a href="/login" class="text-orange-500">přihlásit</a>.</h3>
+                    <h3 class="text-md font-semibold">Pro uložení příspěvku je nutné se <a href="/login" class="text-orange-500">přihlásit</a>.</h3>
                     <button @click="modalOpen=false" class="flex absolute top-0 right-0 justify-center items-center mt-5 mr-5 w-8 h-8 text-gray-600 rounded-full hover:text-gray-800 hover:bg-gray-50">
                         <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>  
                     <button>

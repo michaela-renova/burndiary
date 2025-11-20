@@ -14,10 +14,10 @@ class LoginController extends Controller
 
      public function register(Request $request): RedirectResponse
     {
-        $validated = $request->validate([
+        $validated = $request->validateWithBag('register', [
             'name' => ['required', 'string', 'min:2', 'max:255'],
             'email' => ['required', 'email', 'max:255', Rule::unique('users', 'email')],
-            'password' => ['required', 'string', 'min:8', 'max:20'],
+            'password' => ['required', 'string', 'min:5', 'max:20'],
         ], [
             'name.required' => "Jméno je povinné.",
             'name.min' => "Jméno je příliš krátké.",
@@ -25,7 +25,7 @@ class LoginController extends Controller
             'password.required' => "Heslo je povinné.",
             'password.min' => "Heslo je příliš krátké.",
             'password.max' => "Heslo je příliš dlouhé.",
-        ])->validateWithBag('register');
+        ]);
 
         
         $user = User::create([

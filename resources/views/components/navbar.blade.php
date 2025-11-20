@@ -9,10 +9,10 @@
     
 <div class="flex justify-between items-center space-x-4 mr-4">
 @auth
-<div class="bg-orange-50 rounded-lg">
-    <p class="font-bold px-3 py-1 ">{{auth()->user()->name}}</p>
-</div>
-<a href="/dashboard" class="inline-flex border-2 border-orange-500 hover:white hover:text-orange-600 hover:border-orange-600 text-orange-500 font-bold px-3 py-1 rounded-lg">Moje příspěvky</a>
+<x-profile-info />
+
+
+<a href="/dashboard" class="inline-flex border border-orange-500 hover:white hover:text-white hover:bg-orange-500 text-orange-500 font-bold px-3 py-1 rounded-lg transtition duration-300">Moje příspěvky</a>
 <form action="/logout" method="POST">
     @csrf
     <x-button type="submit">Odhlášení</x-button>

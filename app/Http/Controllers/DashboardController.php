@@ -13,4 +13,10 @@ class DashboardController extends Controller
 
         return view('dashboard', ['posts' => $posts]);
     }
+
+    public function index()
+    {
+        return view('home');
+    }
+
 }

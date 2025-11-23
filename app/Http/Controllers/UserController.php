@@ -14,6 +14,8 @@ class UserController extends Controller
 
         $request->validate([
             'profile_image' => ['required', 'image'],
+        ],[
+            'profile_image.required' => "Nebyl vybrán soubor.",
         ]);
 
         
@@ -32,7 +34,7 @@ class UserController extends Controller
 
     }
 
-    public function showUploadForm(User $user)
+    public function showUploadForm()
     {
         return view('upload-image');
     }

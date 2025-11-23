@@ -1,9 +1,14 @@
 <nav class="p-4 border border-gray-200 flex justify-between">
    <a href="/"> 
  <img 
-    src="{{ asset('images/logo.png') }}"  
+    src="{{ asset('images/logo3.png') }}"  
     alt="logo"
-    class="h-12">
+    class="hidden md:block h-12 transform transition duration-300 hover:scale-103">
+
+      <img
+    src="{{ asset('images/logo_small.png') }}"
+    alt="small logo"
+    class="block md:hidden h-12 transform transition duration-300 hover:scale-105">
    </a>
                  
     
@@ -12,7 +17,7 @@
 <x-profile-info />
 
 
-<a href="/dashboard" class="inline-flex border border-orange-500 hover:white hover:text-white hover:bg-orange-500 text-orange-500 font-bold px-3 py-1 rounded-lg transtition duration-300">Moje příspěvky</a>
+<a href="/dashboard" class="inline-flex whitespace-nowrap border border-orange-500 hover:text-white! hover:bg-orange-500 text-orange-500 font-bold px-3 py-1 rounded-lg transition duration-300 ease-in-out">Moje příspěvky</a>
 <form action="/logout" method="POST">
     @csrf
     <x-button type="submit">Odhlášení</x-button>
@@ -74,35 +79,7 @@
 
               
                 <div class="container mx-auto w-full">
-                    <h1 class="text-2xl font-bold mb-6 text-center">Přihlášení</h1>
-
-                    <form action="/login" method="POST">
-                        @csrf
-                        <label for="email" class="font-bold">Email</label>
-                        <x-input 
-                            type="email" 
-                            placeholder="jmeno@email.com" 
-                            name="email" 
-                            value="{{ old('email') }}" 
-                            class="mb-4 w-full focus:border-neutral-800 focus:outline-none" 
-                        />
-
-                        <label for="password" class="font-bold">Heslo</label>    
-                        <x-input 
-                            type="password" 
-                            placeholder="*****" 
-                            name="password" 
-                            value="{{ old('password') }}" 
-                            class="mb-8 w-full focus:border-neutral-800 focus:outline-none"
-                        />
-
-                        <x-button type="submit" class="mb-4 w-full">Přihlásit se</x-button>
-                    </form>
-
-                    <p class="text-sm text-center">
-                        Nemáš účet? 
-                        <a href="/register" class="text-orange-500 hover:text-orange-600 font-bold">Zaregistruj se.</a>
-                    </p>
+                   <x-login-form />
                 </div>
             </div>
         </div>

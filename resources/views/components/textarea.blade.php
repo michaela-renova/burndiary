@@ -8,4 +8,8 @@
                  class="hidden absolute top-0 left-0 w-full h-full object-contain pointer-events-none">
     </div>
 
+@error('content')
+    <p class="text-red-500 text-sm">{{ $message }}</p>
+@enderror
+
 </div>

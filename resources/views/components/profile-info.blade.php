@@ -5,13 +5,10 @@
     }"
     class="relative">
 
-    <button x-on:click="dropdownOpen=true" class="inline-flex justify-center items-center transform duration-300 hover:scale-105 text-sm font-medium rounded-md transition-colors text-neutral-700 active:bg-white focus:bg-white focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
-        <img  src="{{ auth()->user()->profile_image ? asset('storage/' . auth()->user()->profile_image) : asset('images/default_image.jpg') }}"
+    <button x-on:click="dropdownOpen=true" class="inline-flex justify-center items-center transform transition duration-300 hover:scale-108 text-sm font-medium rounded-md text-neutral-700 active:bg-white focus:bg-white focus:outline-none disabled:opacity-50 disabled:pointer-events-none">
+        <img  src="{{ auth()->user()->profile_image ? asset('storage/' . auth()->user()->profile_image) : asset('images/default_image2.jpg') }}"
         class="object-cover w-9 h-9 rounded-full" />
-        <span class="flex items-center ml-2 h-full leading-none translate-y-px">
-            
-          
-        </span>
+  
                 
     </button>
 

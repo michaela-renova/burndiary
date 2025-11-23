@@ -72,5 +72,6 @@ method="POST">
 
 </div>
 
+<x-footer class= />
 
 </x-layouts.app>

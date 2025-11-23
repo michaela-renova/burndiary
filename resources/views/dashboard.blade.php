@@ -9,7 +9,7 @@
                 {{ $post ['content'] }}
                 </div>
                 
-                <div class="flex justify-between gap-4">
+                <div class="flex justify-between gap-4 items-end">
                 <div class="flex items-center gap-4">
 
                 <form action="/edit-post/{{ $post->id }}" method="GET">
@@ -29,7 +29,7 @@
                 </form>
                 </div>
                 
-                <p class="text-sm text-gray-500 mb-4">
+                <p class="text-sm text-gray-500">
                     @if ($post->updated_at->ne($post->created_at))
                      Upraveno dne {{ $post->updated_at->format('d.m.Y H:i') }}
                     @else
@@ -43,4 +43,7 @@
     @endforeach
     </div>
 </div>
+
+
+
 </x-layouts.app>

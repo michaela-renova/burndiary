@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Zapalovací deník</title>
     @vite('resources/css/app.css')
     @vite('resources/js/app.js')
     
@@ -17,7 +17,7 @@
     
     
 
-<main class="container mx-auto p-16 rounded-xl mt-16">
+<main class="container mx-auto p-16 rounded-xl mt-16 z-20">
     
     {{ $slot }}
 </main>
@@ -32,6 +32,8 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+
+
 
 </body>
 </html>

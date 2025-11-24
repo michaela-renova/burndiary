@@ -1,4 +1,4 @@
-<nav class="p-4 border border-gray-200 flex justify-between">
+<nav class="p-4 border border-gray-200 flex justify-between sticky top-0 z-30 bg-white">
    <a href="/"> 
  <img 
     src="{{ asset('images/logo3.png') }}"  
